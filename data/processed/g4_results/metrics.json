@@ -1,0 +1,93 @@
+{
+  "status": "passed",
+  "dataset": "UCI Default of Credit Card Clients",
+  "split_counts": {
+    "train": 18000,
+    "validation": 6000,
+    "test": 6000
+  },
+  "fit_split": "train",
+  "validation_use": "none_fixed_configuration",
+  "test_split": "test",
+  "positive_label": "target_default_payment_next_month",
+  "positive_value": 1,
+  "threshold": 0.5,
+  "threshold_rule": "score >= threshold",
+  "zero_division": 0,
+  "score_definition": "Uncalibrated positive-class predict_proba score",
+  "numeric_features": [
+    "limit_bal",
+    "age",
+    "mean_bill_statement_amt",
+    "mean_previous_payment_amt",
+    "explained_delay_months",
+    "status_minus2_months",
+    "status_zero_months"
+  ],
+  "categorical_features": [
+    "sex",
+    "education",
+    "marriage",
+    "latest_repayment_status"
+  ],
+  "sklearn_version": "1.9.1",
+  "input_sha256": {
+    "data/processed/g3_results/customer_features.csv": "59f6a6df9a7c3b01287b03a8d1102de536540ed71e2a0a8140fd2ed948a2d0c9",
+    "data/processed/g3_results/quality.json": "1083633cba660570efaad276418f1c9066ed96a05f07835762ff64029a111217",
+    "data/processed/finrisk_g2.sqlite": "f3557f7a0ec9d1c144da2e58205eb22c336f889c55503a10b7283c7a15231888",
+    "data/processed/g2_results/customer_split_ids.csv": "8f0b23ea3ba2b94352d0be2aa3486f3de00459b7d0a710d285b26e25f0892781"
+  },
+  "dummy_prior": {
+    "strategy": "prior",
+    "training_prior_positive": 0.2212222222222222
+  },
+  "logistic_regression": {
+    "solver": "lbfgs",
+    "C": 1.0,
+    "regularization": "L2",
+    "l1_ratio": 0.0,
+    "max_iter": 1000,
+    "iterations": 73,
+    "class_weight": null,
+    "numeric_preprocessing": "training median imputation then StandardScaler",
+    "categorical_preprocessing": "training most-frequent imputation then OneHotEncoder(drop=first, handle_unknown=ignore)",
+    "intercept": -2.5602284184709685,
+    "reference_categories": {
+      "sex": 1,
+      "education": 0,
+      "marriage": 0,
+      "latest_repayment_status": -2
+    },
+    "coefficient_interpretation": {
+      "numeric": "Log-odds change per one training standard deviation, holding other features fixed",
+      "categorical": "Log-odds difference from the listed reference code, holding other features fixed",
+      "odds_ratio": "exp(coefficient), multiplicative change in modeled odds"
+    }
+  },
+  "models": {
+    "dummy_prior": {
+      "test_customers": 6000,
+      "actual_positives": 1327,
+      "positive_rate": 0.22116666666666668,
+      "roc_auc": 0.5,
+      "average_precision": 0.22116666666666668,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_positives": 0,
+      "no_predicted_positives": true
+    },
+    "logistic_regression": {
+      "test_customers": 6000,
+      "actual_positives": 1327,
+      "positive_rate": 0.22116666666666668,
+      "roc_auc": 0.7760018390371599,
+      "average_precision": 0.5564395860087498,
+      "precision": 0.6855072463768116,
+      "recall": 0.35644310474755087,
+      "f1": 0.4690133862171542,
+      "predicted_positives": 690,
+      "no_predicted_positives": false
+    }
+  }
+}

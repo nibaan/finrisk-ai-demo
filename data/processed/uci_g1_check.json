@@ -1,0 +1,725 @@
+{
+  "checked_at_asia_shanghai": "2026-11-07T04:30:00+08:00",
+  "scope": "G1 structure/quality only; no persisted split tables, SQL, model fitting or UI",
+  "source": {
+    "official_page": "https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients",
+    "download_url": "https://archive.ics.uci.edu/static/public/350/default%2Bof%2Bcredit%2Bcard%2Bclients.zip",
+    "final_download_url": "https://archive.ics.uci.edu/static/public/350/default%2Bof%2Bcredit%2Bcard%2Bclients.zip",
+    "downloaded_this_run": true,
+    "acquired_at_asia_shanghai": "2026-11-07T04:19:03+08:00",
+    "verified_at_asia_shanghai": "2026-11-07T04:19:03+08:00",
+    "archive": {
+      "path": "data\\raw\\default_of_credit_card_clients_uci350.zip",
+      "bytes": 5539494,
+      "sha256": "56c885f84457f6680f8438f02bfcdac9579323d8a94465ee5f26e32baa727602",
+      "members": [
+        "default of credit card clients.xls"
+      ]
+    },
+    "original_xls": {
+      "path": "data\\raw\\default of credit card clients.xls",
+      "bytes": 5539328,
+      "sha256": "30c6be3abd8dcfd3e6096c828bad8c2f011238620f5369220bd60cfc82700933"
+    },
+    "license": "CC BY 4.0 per official dataset page",
+    "citation": "Yeh, I. (2009). Default of Credit Card Clients [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C55S3H.",
+    "modifications": "Original ZIP and XLS preserved byte-for-byte; XLS extracted for read-only local checking."
+  },
+  "python": "3.14.7",
+  "pandas": "3.1.1",
+  "xlrd": "2.0.2",
+  "sheets": [
+    {
+      "name": "Data",
+      "rows_including_headers": 30002,
+      "columns": 25
+    }
+  ],
+  "header_row_1": [
+    "",
+    "X1",
+    "X2",
+    "X3",
+    "X4",
+    "X5",
+    "X6",
+    "X7",
+    "X8",
+    "X9",
+    "X10",
+    "X11",
+    "X12",
+    "X13",
+    "X14",
+    "X15",
+    "X16",
+    "X17",
+    "X18",
+    "X19",
+    "X20",
+    "X21",
+    "X22",
+    "X23",
+    "Y"
+  ],
+  "header_row_2": [
+    "ID",
+    "LIMIT_BAL",
+    "SEX",
+    "EDUCATION",
+    "MARRIAGE",
+    "AGE",
+    "PAY_0",
+    "PAY_2",
+    "PAY_3",
+    "PAY_4",
+    "PAY_5",
+    "PAY_6",
+    "BILL_AMT1",
+    "BILL_AMT2",
+    "BILL_AMT3",
+    "BILL_AMT4",
+    "BILL_AMT5",
+    "BILL_AMT6",
+    "PAY_AMT1",
+    "PAY_AMT2",
+    "PAY_AMT3",
+    "PAY_AMT4",
+    "PAY_AMT5",
+    "PAY_AMT6",
+    "default payment next month"
+  ],
+  "official_x_alias_mapping": {
+    "ID": "ID",
+    "X1": "LIMIT_BAL",
+    "X2": "SEX",
+    "X3": "EDUCATION",
+    "X4": "MARRIAGE",
+    "X5": "AGE",
+    "X6": "PAY_0",
+    "X7": "PAY_2",
+    "X8": "PAY_3",
+    "X9": "PAY_4",
+    "X10": "PAY_5",
+    "X11": "PAY_6",
+    "X12": "BILL_AMT1",
+    "X13": "BILL_AMT2",
+    "X14": "BILL_AMT3",
+    "X15": "BILL_AMT4",
+    "X16": "BILL_AMT5",
+    "X17": "BILL_AMT6",
+    "X18": "PAY_AMT1",
+    "X19": "PAY_AMT2",
+    "X20": "PAY_AMT3",
+    "X21": "PAY_AMT4",
+    "X22": "PAY_AMT5",
+    "X23": "PAY_AMT6",
+    "Y": "default payment next month"
+  },
+  "data_rows": 30000,
+  "data_columns": 25,
+  "predictor_columns": 23,
+  "dtypes": {
+    "ID": "int64",
+    "LIMIT_BAL": "int64",
+    "SEX": "int64",
+    "EDUCATION": "int64",
+    "MARRIAGE": "int64",
+    "AGE": "int64",
+    "PAY_0": "int64",
+    "PAY_2": "int64",
+    "PAY_3": "int64",
+    "PAY_4": "int64",
+    "PAY_5": "int64",
+    "PAY_6": "int64",
+    "BILL_AMT1": "int64",
+    "BILL_AMT2": "int64",
+    "BILL_AMT3": "int64",
+    "BILL_AMT4": "int64",
+    "BILL_AMT5": "int64",
+    "BILL_AMT6": "int64",
+    "PAY_AMT1": "int64",
+    "PAY_AMT2": "int64",
+    "PAY_AMT3": "int64",
+    "PAY_AMT4": "int64",
+    "PAY_AMT5": "int64",
+    "PAY_AMT6": "int64",
+    "default payment next month": "int64"
+  },
+  "missing_by_column": {
+    "ID": 0,
+    "LIMIT_BAL": 0,
+    "SEX": 0,
+    "EDUCATION": 0,
+    "MARRIAGE": 0,
+    "AGE": 0,
+    "PAY_0": 0,
+    "PAY_2": 0,
+    "PAY_3": 0,
+    "PAY_4": 0,
+    "PAY_5": 0,
+    "PAY_6": 0,
+    "BILL_AMT1": 0,
+    "BILL_AMT2": 0,
+    "BILL_AMT3": 0,
+    "BILL_AMT4": 0,
+    "BILL_AMT5": 0,
+    "BILL_AMT6": 0,
+    "PAY_AMT1": 0,
+    "PAY_AMT2": 0,
+    "PAY_AMT3": 0,
+    "PAY_AMT4": 0,
+    "PAY_AMT5": 0,
+    "PAY_AMT6": 0,
+    "default payment next month": 0
+  },
+  "missing_cells": 0,
+  "id_unique_count": 30000,
+  "id_missing_count": 0,
+  "duplicate_id_rows": 0,
+  "duplicate_full_rows": 0,
+  "category_counts": {
+    "SEX": {
+      "1": 11888,
+      "2": 18112
+    },
+    "EDUCATION": {
+      "0": 14,
+      "1": 10585,
+      "2": 14030,
+      "3": 4917,
+      "4": 123,
+      "5": 280,
+      "6": 51
+    },
+    "MARRIAGE": {
+      "0": 54,
+      "1": 13659,
+      "2": 15964,
+      "3": 323
+    },
+    "PAY_0": {
+      "-2": 2759,
+      "-1": 5686,
+      "0": 14737,
+      "1": 3688,
+      "2": 2667,
+      "3": 322,
+      "4": 76,
+      "5": 26,
+      "6": 11,
+      "7": 9,
+      "8": 19
+    },
+    "PAY_2": {
+      "-2": 3782,
+      "-1": 6050,
+      "0": 15730,
+      "1": 28,
+      "2": 3927,
+      "3": 326,
+      "4": 99,
+      "5": 25,
+      "6": 12,
+      "7": 20,
+      "8": 1
+    },
+    "PAY_3": {
+      "-2": 4085,
+      "-1": 5938,
+      "0": 15764,
+      "1": 4,
+      "2": 3819,
+      "3": 240,
+      "4": 76,
+      "5": 21,
+      "6": 23,
+      "7": 27,
+      "8": 3
+    },
+    "PAY_4": {
+      "-2": 4348,
+      "-1": 5687,
+      "0": 16455,
+      "1": 2,
+      "2": 3159,
+      "3": 180,
+      "4": 69,
+      "5": 35,
+      "6": 5,
+      "7": 58,
+      "8": 2
+    },
+    "PAY_5": {
+      "-2": 4546,
+      "-1": 5539,
+      "0": 16947,
+      "2": 2626,
+      "3": 178,
+      "4": 84,
+      "5": 17,
+      "6": 4,
+      "7": 58,
+      "8": 1
+    },
+    "PAY_6": {
+      "-2": 4895,
+      "-1": 5740,
+      "0": 16286,
+      "2": 2766,
+      "3": 184,
+      "4": 49,
+      "5": 13,
+      "6": 19,
+      "7": 46,
+      "8": 2
+    },
+    "default payment next month": {
+      "0": 23364,
+      "1": 6636
+    }
+  },
+  "unexplained_codes_by_official_page": {
+    "SEX": {},
+    "EDUCATION": {
+      "0": 14,
+      "5": 280,
+      "6": 51
+    },
+    "MARRIAGE": {
+      "0": 54
+    },
+    "PAY_0": {
+      "-2": 2759,
+      "0": 14737
+    },
+    "PAY_2": {
+      "-2": 3782,
+      "0": 15730
+    },
+    "PAY_3": {
+      "-2": 4085,
+      "0": 15764
+    },
+    "PAY_4": {
+      "-2": 4348,
+      "0": 16455
+    },
+    "PAY_5": {
+      "-2": 4546,
+      "0": 16947
+    },
+    "PAY_6": {
+      "-2": 4895,
+      "0": 16286
+    },
+    "default payment next month": {}
+  },
+  "numeric_ranges": {
+    "ID": {
+      "min": 1,
+      "max": 30000,
+      "negative_count": 0,
+      "zero_count": 0,
+      "non_integer_count": 0
+    },
+    "LIMIT_BAL": {
+      "min": 10000,
+      "max": 1000000,
+      "negative_count": 0,
+      "zero_count": 0,
+      "non_integer_count": 0
+    },
+    "SEX": {
+      "min": 1,
+      "max": 2,
+      "negative_count": 0,
+      "zero_count": 0,
+      "non_integer_count": 0
+    },
+    "EDUCATION": {
+      "min": 0,
+      "max": 6,
+      "negative_count": 0,
+      "zero_count": 14,
+      "non_integer_count": 0
+    },
+    "MARRIAGE": {
+      "min": 0,
+      "max": 3,
+      "negative_count": 0,
+      "zero_count": 54,
+      "non_integer_count": 0
+    },
+    "AGE": {
+      "min": 21,
+      "max": 79,
+      "negative_count": 0,
+      "zero_count": 0,
+      "non_integer_count": 0
+    },
+    "PAY_0": {
+      "min": -2,
+      "max": 8,
+      "negative_count": 8445,
+      "zero_count": 14737,
+      "non_integer_count": 0
+    },
+    "PAY_2": {
+      "min": -2,
+      "max": 8,
+      "negative_count": 9832,
+      "zero_count": 15730,
+      "non_integer_count": 0
+    },
+    "PAY_3": {
+      "min": -2,
+      "max": 8,
+      "negative_count": 10023,
+      "zero_count": 15764,
+      "non_integer_count": 0
+    },
+    "PAY_4": {
+      "min": -2,
+      "max": 8,
+      "negative_count": 10035,
+      "zero_count": 16455,
+      "non_integer_count": 0
+    },
+    "PAY_5": {
+      "min": -2,
+      "max": 8,
+      "negative_count": 10085,
+      "zero_count": 16947,
+      "non_integer_count": 0
+    },
+    "PAY_6": {
+      "min": -2,
+      "max": 8,
+      "negative_count": 10635,
+      "zero_count": 16286,
+      "non_integer_count": 0
+    },
+    "BILL_AMT1": {
+      "min": -165580,
+      "max": 964511,
+      "negative_count": 590,
+      "zero_count": 2008,
+      "non_integer_count": 0
+    },
+    "BILL_AMT2": {
+      "min": -69777,
+      "max": 983931,
+      "negative_count": 669,
+      "zero_count": 2506,
+      "non_integer_count": 0
+    },
+    "BILL_AMT3": {
+      "min": -157264,
+      "max": 1664089,
+      "negative_count": 655,
+      "zero_count": 2870,
+      "non_integer_count": 0
+    },
+    "BILL_AMT4": {
+      "min": -170000,
+      "max": 891586,
+      "negative_count": 675,
+      "zero_count": 3195,
+      "non_integer_count": 0
+    },
+    "BILL_AMT5": {
+      "min": -81334,
+      "max": 927171,
+      "negative_count": 655,
+      "zero_count": 3506,
+      "non_integer_count": 0
+    },
+    "BILL_AMT6": {
+      "min": -339603,
+      "max": 961664,
+      "negative_count": 688,
+      "zero_count": 4020,
+      "non_integer_count": 0
+    },
+    "PAY_AMT1": {
+      "min": 0,
+      "max": 873552,
+      "negative_count": 0,
+      "zero_count": 5249,
+      "non_integer_count": 0
+    },
+    "PAY_AMT2": {
+      "min": 0,
+      "max": 1684259,
+      "negative_count": 0,
+      "zero_count": 5396,
+      "non_integer_count": 0
+    },
+    "PAY_AMT3": {
+      "min": 0,
+      "max": 896040,
+      "negative_count": 0,
+      "zero_count": 5968,
+      "non_integer_count": 0
+    },
+    "PAY_AMT4": {
+      "min": 0,
+      "max": 621000,
+      "negative_count": 0,
+      "zero_count": 6408,
+      "non_integer_count": 0
+    },
+    "PAY_AMT5": {
+      "min": 0,
+      "max": 426529,
+      "negative_count": 0,
+      "zero_count": 6703,
+      "non_integer_count": 0
+    },
+    "PAY_AMT6": {
+      "min": 0,
+      "max": 528666,
+      "negative_count": 0,
+      "zero_count": 7173,
+      "non_integer_count": 0
+    },
+    "default payment next month": {
+      "min": 0,
+      "max": 1,
+      "negative_count": 0,
+      "zero_count": 23364,
+      "non_integer_count": 0
+    }
+  },
+  "target_positive_rate": 0.2212,
+  "history_month_mapping": [
+    {
+      "history_month": "2005-04",
+      "history_month_index": 1,
+      "repayment_status": {
+        "official_x": "X11",
+        "source_column": "PAY_6"
+      },
+      "bill_statement_amt": {
+        "official_x": "X17",
+        "source_column": "BILL_AMT6"
+      },
+      "previous_payment_amt": {
+        "official_x": "X23",
+        "source_column": "PAY_AMT6"
+      }
+    },
+    {
+      "history_month": "2005-05",
+      "history_month_index": 2,
+      "repayment_status": {
+        "official_x": "X10",
+        "source_column": "PAY_5"
+      },
+      "bill_statement_amt": {
+        "official_x": "X16",
+        "source_column": "BILL_AMT5"
+      },
+      "previous_payment_amt": {
+        "official_x": "X22",
+        "source_column": "PAY_AMT5"
+      }
+    },
+    {
+      "history_month": "2005-06",
+      "history_month_index": 3,
+      "repayment_status": {
+        "official_x": "X9",
+        "source_column": "PAY_4"
+      },
+      "bill_statement_amt": {
+        "official_x": "X15",
+        "source_column": "BILL_AMT4"
+      },
+      "previous_payment_amt": {
+        "official_x": "X21",
+        "source_column": "PAY_AMT4"
+      }
+    },
+    {
+      "history_month": "2005-07",
+      "history_month_index": 4,
+      "repayment_status": {
+        "official_x": "X8",
+        "source_column": "PAY_3"
+      },
+      "bill_statement_amt": {
+        "official_x": "X14",
+        "source_column": "BILL_AMT3"
+      },
+      "previous_payment_amt": {
+        "official_x": "X20",
+        "source_column": "PAY_AMT3"
+      }
+    },
+    {
+      "history_month": "2005-08",
+      "history_month_index": 5,
+      "repayment_status": {
+        "official_x": "X7",
+        "source_column": "PAY_2"
+      },
+      "bill_statement_amt": {
+        "official_x": "X13",
+        "source_column": "BILL_AMT2"
+      },
+      "previous_payment_amt": {
+        "official_x": "X19",
+        "source_column": "PAY_AMT2"
+      }
+    },
+    {
+      "history_month": "2005-09",
+      "history_month_index": 6,
+      "repayment_status": {
+        "official_x": "X6",
+        "source_column": "PAY_0"
+      },
+      "bill_statement_amt": {
+        "official_x": "X12",
+        "source_column": "BILL_AMT1"
+      },
+      "previous_payment_amt": {
+        "official_x": "X18",
+        "source_column": "PAY_AMT1"
+      }
+    }
+  ],
+  "temporary_master_shape": [
+    30000,
+    7
+  ],
+  "temporary_history_shape": [
+    180000,
+    6
+  ],
+  "monthly_rows_per_customer_counts": {
+    "6": 30000
+  },
+  "roundtrip_check": [
+    {
+      "history_month": "2005-04",
+      "source_column": "PAY_6",
+      "all_customer_values_equal": true
+    },
+    {
+      "history_month": "2005-04",
+      "source_column": "BILL_AMT6",
+      "all_customer_values_equal": true
+    },
+    {
+      "history_month": "2005-04",
+      "source_column": "PAY_AMT6",
+      "all_customer_values_equal": true
+    },
+    {
+      "history_month": "2005-05",
+      "source_column": "PAY_5",
+      "all_customer_values_equal": true
+    },
+    {
+      "history_month": "2005-05",
+      "source_column": "BILL_AMT5",
+      "all_customer_values_equal": true
+    },
+    {
+      "history_month": "2005-05",
+      "source_column": "PAY_AMT5",
+      "all_customer_values_equal": true
+    },
+    {
+      "history_month": "2005-06",
+      "source_column": "PAY_4",
+      "all_customer_values_equal": true
+    },
+    {
+      "history_month": "2005-06",
+      "source_column": "BILL_AMT4",
+      "all_customer_values_equal": true
+    },
+    {
+      "history_month": "2005-06",
+      "source_column": "PAY_AMT4",
+      "all_customer_values_equal": true
+    },
+    {
+      "history_month": "2005-07",
+      "source_column": "PAY_3",
+      "all_customer_values_equal": true
+    },
+    {
+      "history_month": "2005-07",
+      "source_column": "BILL_AMT3",
+      "all_customer_values_equal": true
+    },
+    {
+      "history_month": "2005-07",
+      "source_column": "PAY_AMT3",
+      "all_customer_values_equal": true
+    },
+    {
+      "history_month": "2005-08",
+      "source_column": "PAY_2",
+      "all_customer_values_equal": true
+    },
+    {
+      "history_month": "2005-08",
+      "source_column": "BILL_AMT2",
+      "all_customer_values_equal": true
+    },
+    {
+      "history_month": "2005-08",
+      "source_column": "PAY_AMT2",
+      "all_customer_values_equal": true
+    },
+    {
+      "history_month": "2005-09",
+      "source_column": "PAY_0",
+      "all_customer_values_equal": true
+    },
+    {
+      "history_month": "2005-09",
+      "source_column": "BILL_AMT1",
+      "all_customer_values_equal": true
+    },
+    {
+      "history_month": "2005-09",
+      "source_column": "PAY_AMT1",
+      "all_customer_values_equal": true
+    }
+  ],
+  "checks": {
+    "matches_page_30000_instances_23_features": true,
+    "id_non_null": true,
+    "id_unique": true,
+    "target_non_null_binary": true,
+    "all_data_cells_non_missing": true,
+    "all_numeric_values_finite": true,
+    "monthly_row_count_six_per_customer": true,
+    "customer_month_key_unique": true,
+    "six_distinct_months_each_customer": true,
+    "history_customer_id_set_matches_master": true,
+    "all_18_month_fields_roundtrip_match": true,
+    "aggregate_then_left_join_preserves_rows_ids_labels": true,
+    "monthly_table_has_no_repeated_target": true,
+    "raw_xls_unchanged": true
+  },
+  "resources": {
+    "data_check_elapsed_seconds": 3.354,
+    "wide_frame_bytes": 6000132,
+    "temporary_history_frame_bytes": 9922632,
+    "process_peak_working_set_bytes": 209956864
+  },
+  "interpretation_limits": [
+    "Unexplained codes retained, not recoded as missing/normal/anomalous",
+    "Months align source fields, not payment-to-same-month-bill causality",
+    "Target is next-month default payment; 2005-10 is an inference, not file-proven",
+    "Derived monthly rows are not independent labeled training samples"
+  ]
+}

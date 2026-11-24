@@ -1,0 +1,72 @@
+{
+  "status": "passed",
+  "database": "data/processed/finrisk_g2.sqlite",
+  "customer_rows": 30000,
+  "distinct_customers": 30000,
+  "history_rows": 180000,
+  "split_counts": {
+    "train": 18000,
+    "test": 6000,
+    "validation": 6000
+  },
+  "analysis_split": "train",
+  "training_events": 3982,
+  "missing_feature_values": 0,
+  "negative_monthly_bills_retained": 3932,
+  "numeric_features": [
+    "limit_bal",
+    "age",
+    "mean_bill_statement_amt",
+    "mean_previous_payment_amt",
+    "explained_delay_months",
+    "status_minus2_months",
+    "status_zero_months"
+  ],
+  "categorical_features": [
+    "sex",
+    "education",
+    "marriage",
+    "latest_repayment_status"
+  ],
+  "credit_limit_cutoffs_twd": [
+    50000,
+    200000
+  ],
+  "small_group_below_customers": 30,
+  "training_education_all_groups_match_q2": true,
+  "spot_checks": {
+    "customer_1": {
+      "months": [
+        "2005-04",
+        "2005-05",
+        "2005-06",
+        "2005-07",
+        "2005-08",
+        "2005-09"
+      ],
+      "bill_amounts": [
+        0,
+        0,
+        0,
+        689,
+        3102,
+        3913
+      ],
+      "repayment_statuses": [
+        -2,
+        -2,
+        -1,
+        -1,
+        2,
+        2
+      ],
+      "mean_bill_statement_amt": 1284.0,
+      "explained_delay_months": 2
+    },
+    "train_education_2_vs_g2_q2": {
+      "valid_label_customers": 8438,
+      "events": 2020,
+      "event_rate": 0.23939322114245082
+    }
+  }
+}

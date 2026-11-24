@@ -1,0 +1,99 @@
+{
+  "source_sha256": "30c6be3abd8dcfd3e6096c828bad8c2f011238620f5369220bd60cfc82700933",
+  "source_path": "data/raw/default of credit card clients.xls",
+  "source_citation": "Yeh, I. (2009). Default of Credit Card Clients. UCI Machine Learning Repository. DOI: 10.24432/C55S3H; CC BY 4.0",
+  "master_rows": 30000,
+  "history_rows": 180000,
+  "months_per_customer": 6,
+  "keys": {
+    "customer_master": "customer_id PRIMARY KEY NOT NULL",
+    "monthly_credit_history": "(customer_id, history_month) PRIMARY KEY",
+    "customer_split": "customer_id PRIMARY KEY"
+  },
+  "month_mapping": [
+    {
+      "month": "2005-04",
+      "index": 1,
+      "repayment": "PAY_6",
+      "bill": "BILL_AMT6",
+      "payment": "PAY_AMT6"
+    },
+    {
+      "month": "2005-05",
+      "index": 2,
+      "repayment": "PAY_5",
+      "bill": "BILL_AMT5",
+      "payment": "PAY_AMT5"
+    },
+    {
+      "month": "2005-06",
+      "index": 3,
+      "repayment": "PAY_4",
+      "bill": "BILL_AMT4",
+      "payment": "PAY_AMT4"
+    },
+    {
+      "month": "2005-07",
+      "index": 4,
+      "repayment": "PAY_3",
+      "bill": "BILL_AMT3",
+      "payment": "PAY_AMT3"
+    },
+    {
+      "month": "2005-08",
+      "index": 5,
+      "repayment": "PAY_2",
+      "bill": "BILL_AMT2",
+      "payment": "PAY_AMT2"
+    },
+    {
+      "month": "2005-09",
+      "index": 6,
+      "repayment": "PAY_0",
+      "bill": "BILL_AMT1",
+      "payment": "PAY_AMT1"
+    }
+  ],
+  "split_seed": 42,
+  "split_counts": {
+    "test": {
+      "customers": 6000,
+      "events": 1327
+    },
+    "train": {
+      "customers": 18000,
+      "events": 3982
+    },
+    "validation": {
+      "customers": 6000,
+      "events": 1327
+    }
+  },
+  "unexplained_codes": {
+    "education": {
+      "0": 14,
+      "5": 280,
+      "6": 51
+    },
+    "marriage": {
+      "0": 54
+    },
+    "repayment_status": {
+      "-2": 24415,
+      "0": 95919
+    }
+  },
+  "negative_bill_rows": 3932,
+  "q2_q5_numerators_denominators_equal": true,
+  "q4_rows_ids_labels_preserved": true,
+  "q6_latest_month_all_2005_09": true,
+  "sample_customer_1_q3_matches_xls": true,
+  "query_row_counts": {
+    "q1": 17044,
+    "q2": 7,
+    "q3": 30000,
+    "q4": 30000,
+    "q5": 7,
+    "q6": 30000
+  }
+}

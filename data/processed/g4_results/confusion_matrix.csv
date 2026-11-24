@@ -1,0 +1,3 @@
+model,tn,fp,fn,tp
+dummy_prior,4673,0,1327,0
+logistic_regression,4456,217,854,473
